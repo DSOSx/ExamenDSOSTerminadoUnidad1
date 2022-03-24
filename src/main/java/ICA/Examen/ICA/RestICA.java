@@ -1,5 +1,7 @@
 package ICA.Examen.ICA;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,7 +27,7 @@ public class RestICA {
     }
     
     @GetMapping("/CalcularICA/{Numerodecontrol}")
-    public String VerICA(@PathVariable("Numerodecontrol") int Numerodecontrol) {
+    public Map<String, String> VerICA(@PathVariable("Numerodecontrol") int Numerodecontrol) {
  	   return sica.ObtenerICA(Numerodecontrol);
     }
     
